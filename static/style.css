@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /*background-color: black;
+    color: white; /* Define a cor do texto para branco para contraste */
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    align=center;
+}
+.centerTable { margin: 0px auto; }
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+}
+
+.input-box {
+    display: inline-block;
+    margin: 10px;
+}
+
+.form-container {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-box {
+    margin: 10px;
+}

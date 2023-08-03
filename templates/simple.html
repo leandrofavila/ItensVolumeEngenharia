@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Itens de um Volume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Itens de um Volume</h1>
+    <form class="form-container" method="POST">
+        <input class="input-box" type="text" id="car" name="car" placeholder="Carregamento">
+        <input class="input-box" type="text" id="item" name="item" placeholder="Item">
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if result.empty %}
+        <p>Nenhum resultado encontrado.</p>
+    {% else %}
+        <table class="centerTable">
+            <tr>
+                <th>CARREGAMENTO</th>
+                <th>CODIGO_VOLUME</th>
+                <th>COD_ITEM</th>
+                <th>DESC_TECNICA</th>
+                <th>QTDE</th>
+            </tr>
+            {% for index, row in result.iterrows() %}
+            <tr>
+                <td>{{ row['CARREGAMENTO'] }}</td>
+                <td>{{ row['CODIGO_VOLUME'] }}</td>
+                <td>{{ row['COD_ITEM'] }}</td>
+                <td>{{ row['DESC_TECNICA'] }}</td>
+                <td>{{ row['QTDE'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+</body>
+</html>
